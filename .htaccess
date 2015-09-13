@@ -1,0 +1,9 @@
+AddDefaultCharset UTF-8
+
+Options +FollowSymLinks
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} robots.txt$ [NC]
+RewriteRule ^([^/]+) $1 [L]
+
+RewriteCond %{HTTP_HOST} ^avtoshkolavsamare\.ru
+RewriteRule ^(.*)$ http://avtoshkola-v-samare.ru/$1 [R=301,L]
